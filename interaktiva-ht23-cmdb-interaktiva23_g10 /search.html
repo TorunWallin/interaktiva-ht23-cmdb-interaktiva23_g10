@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMDb</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9564ece723.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Creepster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Cineasterna</h1>
+        <p>Din mysigaste "go-to" för att hitta filmer</p>
+    </header>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="about.html">Om oss</a></li>
+        </ul>
+
+        <div class="searchbar">
+            <form id="search-form" action="sökresultat.html" method="get">
+                <input type="text" placeholder="Sök här..." name="search" id="search-input" required>
+                <button type="submit" class="btn-search">Sök</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="pagetitle">
+        <h1>SÖKRESULTAT</h1>
+    </div>
+    
+        <div class="filter-options">
+            <label for="category">Filmgenre:</label>
+            <select id="category">
+                <option value="all">Alla</option>
+                <option value="Action">Action</option>
+                <option value="Adventure">Äventyr</option>
+                <option value="Animation">Animerat</option>
+                <option value="Comedy">Komedi</option>
+                <option value="Crime">Kriminellt</option>
+                <option value="Documentary">Documentär</option>
+                <option value="Drama">Drama</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Horror">Skräck</option>
+                <option value="Romance">Romance</option>
+                <option value="Sci-Fi">Sci-FY</option>
+                <option value="Thriller">Thriller</option>
+            </select>
+
+            <label for="sort">Sortera:</label>
+            <select id="sort">
+                <option value="Best">Bästa sökträff</option>
+                <option value="Year">År</option>
+                <option value="Runtime">Längd</option>
+            </select>
+        </div>
+
+   <div id="search_result" class="search_details">
+
+    <script type="module" src="./js/getmoviefromAPI.js"></script>  
+    <script type="module" src="./js/app.js"></script>
+    
+   </div>    
+   <footer>
+    <div class="logo-image">
+        <img src="img/logo.png" alt="Logotyp" width="150" height="150">
+    </div>
+    <div class="footer">
+        <ul class="footer-links">
+            <li><a href="contact.html">Kontakta oss</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cineasterna</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CMDB</h1>
+        <p>Din mysigaste "go-to" för att hitta filmer</p>
+    </header>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="about.html">Om oss</a></li>
+        </ul>
+        <div class="searchbar">
+            <form id="search-form" action="search.html" method="get">
+                <input type="text" placeholder="Sök här..." name="search" id="search-input" required>
+                <button type="submit" class="btn-search">Sök</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="flex-container">
+        <div class="flex-item horizontal-left">
+            <h1 id="search-result-h1">Detaljsida</h1>
+        </div>
+        <div class="detail-section" id="movie-details">
+        </div>
+        
+        <div class="ratings-and-reviews-container">
+            <div class="detail-section" id="score">
+            </div>
+            
+            <div class="flex-item review-input">
+                <div class="movie-review">
+                    <section id="review-section">
+                        <h2>Skriv en recenssion: </h2>
+                        <input type="text" id="reviewerName" placeholder="Your Name">
+                        <h3>Välj betyg: </h3>
+                        <div id="ratingButtons">
+                            <button class="rank-btn btn1" value="1">1</button>
+                            <button class="rank-btn btn2" value="2">2</button>
+                            <button class="rank-btn btn3" value="3">3</button>
+                            <button class="rank-btn btn4" value="4">4</button>
+                        </div>
+                        <textarea id="reviewText" placeholder="Your Review"></textarea>
+                        <button id="submitReview" class="knapp-lank">Skicka</button>
+                    </section>
+                </div>
+            </div>
+            
+            <div class="flex-item review-input">
+                <h2>Sätt ett betyg</h2>
+                <h3>Btygsätt: </h3>
+                <div id="ratingButtonsalone">
+                    <button class="rank-btn-alone btn1" value="1">1</button>
+                    <button class="rank-btn-alone btn2" value="2">2</button>
+                    <button class="rank-btn-alone btn3" value="3">3</button>
+                    <button class="rank-btn-alone btn4" value="4">4</button>
+                </div>
+                <button id="submitReviewAlone" class="knapp-lank">Skicka</button>
+            </div>
+    
+    
+        </div>
+        
+        <div class="detail-section" id="reviews">
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/9564ece723.js" crossorigin="anonymous"></script>
+    <script type="module" src="./js/app.js"></script>
+    <script type="module" src="./js/details.js"></script>
+
+    <footer>
+        <div class="logo-image">
+            <img src="img/logo.png" alt="Logotyp" width="150" height="150">
+        </div>
+        <div class="footer">
+            <ul class="footer-links">
+                <li><a href="contact.html">Kontakta oss</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
+

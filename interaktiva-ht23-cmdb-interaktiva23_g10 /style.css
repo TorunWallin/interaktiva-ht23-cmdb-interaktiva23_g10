@@ -1,0 +1,853 @@
+/* Globala stilar */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    color: #fff;
+    background-color: #1d1e23;
+    font-size: 16px;
+}
+
+ h1 {
+    font-family: 'Cinzel', cursive;
+    text-align: center;
+}
+
+/* Header-stilar */
+header {
+    background-image: url('img/cute_pumpkin.webp');
+    background-size: cover;
+    padding: 150px 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-bottom: 2px solid rgb(255, 139, 0);
+    color: #ff8b00;
+    background-blend-mode: multiply; 
+}
+
+header h1, header p {
+    color: #ff8b00;
+    font-family: 'Cinzel', cursive;
+    text-align: center;
+}
+
+
+header h1 {
+    font-size: 150px;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.8);
+}
+
+header {
+    font-size: 30px;
+}
+
+
+/* Navigationsstilar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ff8b00;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    z-index: 200;
+    padding: 0 20px;
+    background-color: #b66014;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    color: #ff8b00;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+}
+
+.navigation a:hover {
+    background-color: #ff8b00;
+    color: #221f20;
+    transform: translateY(-3px);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Sökfält och knapp */
+nav input[type="text"] {
+    font-size: 18px;
+    border: none;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.searchbar {
+    display: flex;
+}
+
+#search-input {
+    width: 70%;
+}
+
+.btn-search {
+    width: 50px;
+    background-color: #ff8b00;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.btn-search:hover {
+    color: #221f20;
+    transform: translateY(-3px);
+    transition: transform 0.3s ease-in-out;
+    background-color: #bb7013;
+    cursor: pointer;
+}
+
+/*Topplistan*/
+.toplist {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 100%;
+}.movieCon:first-of-type.page-1 {
+    width: 100%;
+}
+
+.movieCon:first-of-type.page-1 .movie {
+    width: 60%;
+    padding: 30px;
+    flex-direction: row;
+    max-height: 600px;
+}
+
+.movieCon:first-of-type.page-1 .rateOnToplistLabel {
+    padding-top: 0%;
+}
+
+.movieCon:first-of-type.page-1 .rateOnToplist {
+    margin-left: 20%;
+}
+
+.movieCon:nth-child(2).page-1, .movieCon:nth-child(3).page-1 {
+    width: 50%;
+}
+
+.movieCon:nth-child(2).page-1 .movie, .movieCon:nth-child(3).page-1 .movie {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    min-height: 400px;
+    max-height: 600px;
+}
+
+.movieCon:nth-child(2) .movie img .page-1 {
+    height: 100%;
+}
+
+.movieCon:nth-child(n+4):nth-child(-n+10), .movieCon:not(.page-1), .movieCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    padding: 10px;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+    background-color: #422b2b; 
+    border: 3px solid #ff7518; 
+    box-shadow: 0 0 10px #ff7518; 
+    border-radius: 20px; 
+    height: auto; /* Sammanfogat med 'height: 100%;' för att undvika konflikter */
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #F5A300;
+    font-size: 20px;
+    font-weight: 900;
+    height: 80px;
+    padding: 5px;    
+    text-shadow: #000000 1px 1px 1px;
+}
+.title:hover{
+    color: #a56e00;
+    cursor: pointer;
+}
+.movie img{
+    margin-top: 22px;
+    max-width: 300px;
+    height: auto;
+    max-height: 400px;
+    border-radius: 2%;
+    border: 3px solid #ff7518;    
+    align-self: center;
+ 
+}
+.movie img:hover {
+    opacity: 0.8; /* Gör bilden lite genomskinlig vid hover */
+    transform: scale(1.1); /* Förstorar bilden vid hover */
+}
+
+/* Stilar för film-information */
+.movieInformation {
+    color: #e4c4c4; /* Ljusare textfärg för läsbarhet */
+    padding: 15px;
+    border-radius: 10px; /* Rundade hörn */
+    margin-top: 10px; /* Ger utrymme mellan bild och text */
+}
+
+.movieInformation p{
+    display: inline-block;
+    text-align: left;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.txtDescription{
+    color:rgb(228, 196, 196);
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+.movie-plot{
+    display: flex;
+    overflow:auto;
+    height: 200px;
+}
+
+/* Knappar*/
+
+.plotbutton{
+    background-color: #3a1013; /* Mörk bakgrundsfärg */
+    color: #F5A300; /* Halloween-orange text */
+    border: 2px solid #ff7518; /* Halloween-orange kant */
+    border-radius: 20px; /* Rundade hörn */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Animation för bakgrundsfärg */
+}
+
+.plotbutton:hover {
+    background-color: #6d0009; /* Mörkare bakgrund vid hover */
+}
+
+.cmdbscore{
+    display: flex;
+    color: goldenrod;
+    font-size: 16px;
+    text-shadow: #000000 1px 1px 1px;
+    padding: 10px;
+    margin-bottom: 15px;
+    padding-left: 5px;
+    background-color: #644a4b;
+ border-radius: 30px;
+justify-content: center;
+}
+
+.rateOnToplistLabel{
+    padding-top: 10%;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.rateOnToplist{ 
+ display: flex;
+ max-width: 150px;
+}
+.rateOnToplistContainer{ 
+    position: relative;
+    height: 9rem;
+    max-width: 35%;
+}
+
+.inputToplist{ 
+    position: absolute;
+    height: 28%;
+    width: 4rem;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0%;
+    color: #fff;
+    font-size: 3rem;
+    align-items: center;
+
+}
+.fa-regular{
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 5px;
+}
+
+
+.rateOnToplistContainer input:checked ~ i{
+    color: #F5A300;
+    opacity: 100%;
+}
+
+.rateOnToplistContainer:hover{
+    scale: 1.2;
+    transform: scale(1.1);
+    opacity: 100%;
+  }
+  
+
+.rateButtonToplist{
+    height: 37px;
+    width: 70px;
+    align-items: center;
+    border: 1px solid #08940f;
+    border-radius: 15px;
+    background-color: #257728;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;  
+    text-shadow: #3f3f3f 3px 2px 3px;
+    box-shadow: rgb(89, 255, 74) 2px 1px 8px; 
+    margin-bottom: 100px;
+    margin-left:25%;
+}
+
+.rateButtonToplist:hover{
+    background-color:rgb(47, 143, 23);
+}
+.rateButtonToplist:disabled{
+    background-color: #3f3f3f;
+    box-shadow: rgb(0, 0, 0) 2px 1px 8px; 
+    border: none;
+    color:rgba(224, 211, 211, 0.712)
+}
+
+.rateOnToplistp{
+   margin-top: 60px;
+   margin-left: -300px;
+   min-width: 500px;
+   color: white; 
+}
+
+.rateOnToplistLabel{
+    padding-top: 10%;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.rateOnToplist{ 
+ display: flex;
+ max-width: 150px;
+}
+.rateOnToplistContainer{ 
+    position: relative;
+    height: 9rem;
+    max-width: 35%;
+}
+
+/*Detaljsida för alla filmer*/
+.flex-container {
+    display: flex;
+    flex-direction: column; 
+    background-color: #2b2b2b; 
+    color: #ff9800;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+.flex-item.horizontal-left {
+    align-self: flex-start; 
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.flex-item.horizontal-left h1 {
+    font-family: 'Creepster', cursive; 
+    text-shadow: 2px 2px 4px #000; 
+}
+
+.detail-section {
+    background-color: #3e2723;
+    color: #ffe0b2; 
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.movie-container {
+    width: 50%;
+    display: flex;
+    margin-bottom: 20px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.movie-image {
+    flex: 1;
+}
+
+.movie-info {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.review-input, .rating-section {
+    background-color: #ff8b00; 
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #a67300; 
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #333; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-shadow: 1px 1px 2px #000; 
+}
+
+.submit-button:hover {
+    background-color: #555; 
+    transform: translateY(-2px); 
+}
+
+.flex-item h2, h3 {
+    font-family: 'Tangerine', cursive; 
+    color: #fff; 
+    margin-bottom: 20px; 
+}
+
+.review-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-family: 'Creepster', cursive; 
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: #ff8b00; 
+}
+
+.review-item strong {
+    font-weight: bold;
+    color: #fff; 
+}
+
+hr {
+    border: none;
+    border-top: 1px dashed #ff8b00; 
+    margin: 20px 0;
+}
+
+#reviews {
+    max-height: 850px;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #1c1c1c; 
+}
+
+.rank-btn, .rank-btn-alone {
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #555555;
+    transition: background-color 0.3s, transform 0.2s;
+    background-color: #444; 
+    color: #ff8b00; 
+}
+
+.rank-btn:hover, .rank-btn-alone:hover {
+    background-color: #ff8b00; 
+    color: #1c1c1c; 
+    transform: translateY(-2px); 
+}
+
+.rank-btn.active, .rank-btn-alone.active {
+    background-color: #2c2c2c; 
+    color: #fff;
+}
+
+button:disabled, #submitReviewAlone:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.btn1 {
+    background-color: #FF0000; 
+}
+
+.btn2 {
+    background-color: #FE9934; 
+}
+.btn3 {
+    background-color: #90AA45; /
+}
+.btn4 {
+    background-color: #246A36; 
+}
+.btn1:hover, .btn2:hover, .btn3:hover, .btn4:hover {
+    opacity: 0.8; /
+}
+
+
+
+/* Sökresultat-sida */
+
+.backgroundsearch {
+    background-color: #3e2723; 
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px #d84315;
+}
+
+.yoursearch {
+    color: #ff9800; 
+    text-align: center;
+    font-weight: 900;
+    font-size: 25px;
+    margin-top: 20px;
+    text-shadow: 1px 1px #4e342e; 
+}
+
+.filter-options {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #6d4c41; 
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #d84315; 
+    box-shadow: 0 0 10px #d84315;
+}
+
+.filter-options label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #ffe0b2; 
+}
+
+.filter-options select {
+    padding: 5px;
+    border-radius: 5px;
+    width: 250px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-family: 'Tangerine', cursive; 
+    height: 38px;
+    background-color: #5d4037; 
+    color: #ffe0b2; 
+    border: 1px solid #d84315; 
+}
+
+.movieSearchResult:hover {
+    background-color: #3e2723; 
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.searchPoster img {
+    width: 100px;
+    border-radius: 4px; 
+}
+
+.info {
+    border-radius: 3px;
+    padding: 15px;
+    background-color: #5d4037; 
+}
+
+.movieSearchResult {
+    border: 1px solid #d84315; 
+    margin: 10px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    background-color: #4e342e; 
+    box-shadow: 0 0 5px #d84315; 
+}
+
+.info h2 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #ff9800; 
+}
+
+.info p {
+    color: #ffe0b2; 
+    font-size: 15px;
+}
+
+.info label {
+    color: #ffe0b2;
+}
+
+
+.movie-container {
+    display: flex;
+    margin-bottom: 20px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.movie-image {
+    flex: 1;
+}
+
+.movie-info {
+    flex: 2;
+    padding-left: 20px;
+}
+
+
+/* Om oss */
+
+.om-oss-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #201c1d; 
+    padding: 20px;
+    text-align: center;
+    color: #ff7518; 
+}
+
+.om-oss {
+    color: #ff7518;
+    padding: 20px;
+    text-align: center;
+    max-width: 40%;
+    background: rgba(255, 117, 24, 0.2);
+    backdrop-filter: blur(5px); 
+    border-radius: 15px; 
+    border: 2px solid #ff7518; 
+    margin: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); 
+}
+
+.om-oss img {
+    border-radius: 15px; 
+    width: 100%; 
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px; 
+}
+
+.om-oss h2 {
+    font-family: 'Tangerine', cursive; 
+    color: #fff; 
+    margin-bottom: 20px; 
+}
+
+.om-oss p {
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #ff7518;
+    padding: 10px; 
+    border-radius: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+/* Footer */
+
+footer {
+    color: #ff8b00;
+    background-color: #221f20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    border-top: 2px solid #ff8b00;
+}
+.nav-li {
+    display: flex;
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    display: flex;
+    padding: 12px;
+    color: #ff8b00;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Lobster', cursive;
+
+}
+
+a:link { 
+    color: #ff8b00; 
+}
+
+li a:hover {
+    background-color: #ff8b00;
+    color: #221f20;
+}
+
+.footer ul { 
+    list-style-type: none; 
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+/* Stilar för skärmstorlekar upp till 1024px */
+@media all and (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .navigation {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .flex-item, .movie-container {
+        flex-direction: column; 
+    }
+
+    .movie-image, .movie-info, .flex-item.vertical img {
+        padding: 10px; 
+        width: 100%; /* Sammanfoga stil för '.flex-item.vertical img' här */
+        height: auto;
+    }
+
+    .movie-info {
+        text-align: left;
+    }
+
+    .om-oss, article, .topplistan-img, .container {
+        max-width: 100%;
+    }
+
+    .omossimg {
+        width: 400px;
+        height: auto;
+    }
+
+    header {
+        font-size: 30px;
+    }
+
+    header h1 {
+        font-size: 50px;
+    }
+
+    #search-result-h1 {
+        font-size: 40px;
+    }
+
+    .movieCon, .movieCon:first-of-type.page-1, .movieCon:nth-child(2).page-1, 
+    .movieCon:nth-child(3).page-1, .movieCon:nth-child(n+4):nth-child(-n+10), 
+    .movieCon:not(.page-1) {
+        width: 100%; /* Full bredd för alla .movieCon element */
+        flex-direction: column; /* Ändra riktning till vertikal */
+    }
+
+    .movieCon:first-of-type.page-1 .movie, .movieCon:nth-child(2).page-1 .movie, 
+    .movieCon:nth-child(3).page-1 .movie, .movie {
+        width: auto; /* Justera bredd för mobilvisning */
+        flex-direction: column; /* Ändra riktning till vertikal */
+        padding: 10px; /* Justerad padding för mobilvisning */
+        min-height: auto; /* Justera minsta höjd */
+        max-height: none; /* Ta bort maxhöjdsbegränsning */
+    }
+
+    .movieCon:first-of-type.page-1 .rateOnToplistLabel, 
+    .movieCon:first-of-type.page-1 .rateOnToplist {
+        margin-left: 0; /* Ta bort marginal för mobilvisning */
+        padding-top: 10px; /* Justerad padding för mobilvisning */
+    }
+
+    
+}
+
+/* Stilar för skärmstorlekar upp till 500px */
+@media all and (max-width: 500px) {
+    header {
+        font-size: 15px;
+    }
+    
+    nav {
+        position: static; 
+    }
+    .navigation {
+        flex-direction: column;
+    }
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid grey;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .knapp-lank {
+        font-size: 12px; 
+        padding: 8px; 
+    }
+
+    .movieCon, .movieCon:first-of-type.page-1, .movieCon:nth-child(2).page-1, 
+    .movieCon:nth-child(3).page-1, .movieCon:nth-child(n+4):nth-child(-n+10), 
+    .movieCon:not(.page-1) {
+        width: 100%; /* Full bredd för alla .movieCon element */
+        flex-direction: column; /* Ändra riktning till vertikal */
+    }
+
+    .movieCon:first-of-type.page-1 .movie, .movieCon:nth-child(2).page-1 .movie, 
+    .movieCon:nth-child(3).page-1 .movie, .movie {
+        width: auto; /* Justera bredd för mobilvisning */
+        flex-direction: column; /* Ändra riktning till vertikal */
+        padding: 10px; /* Justerad padding för mobilvisning */
+        min-height: auto; /* Justera minsta höjd */
+        max-height: none; /* Ta bort maxhöjdsbegränsning */
+    }
+
+    .movieCon:first-of-type.page-1 .rateOnToplistLabel, 
+    .movieCon:first-of-type.page-1 .rateOnToplist {
+        margin-left: 0; /* Ta bort marginal för mobilvisning */
+        padding-top: 10px; /* Justerad padding för mobilvisning */
+    }
+
+
+
+}
+    

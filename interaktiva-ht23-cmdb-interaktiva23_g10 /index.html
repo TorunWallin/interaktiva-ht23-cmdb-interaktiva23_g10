@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cineasterna</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CMDB</h1>
+        <p>Din mysigaste "go-to" för att hitta filmer</p>
+    </header>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="about.html">Om oss</a></li>
+        </ul>
+        <div class="searchbar">
+            <form id="search-form" action="search.html" method="get">
+                <input type="text" placeholder="Sök här..." name="search" id="search-input" required>
+                <button type="submit" class="btn-search">Sök</button>
+            </form>
+        </div>
+    </nav>
+      
+        <div class="pagetitle">
+            <h1>Hetast just nu!</h1>
+        </div>
+
+<div id="movieList" class="toplist"></div>
+
+<script src="https://kit.fontawesome.com/9564ece723.js" crossorigin="anonymous"></script>
+<script type="module" src="./js/app.js"></script>
+<script type="module" src="./js/details.js"></script>
+<footer>
+    <div class="logo-image">
+        <img src="img/logo.png" alt="Logotyp" width="150" height="150">
+    </div>
+    <div class="footer">
+        <ul class="footer-links">
+            <li><a href="contact.html">Kontakta oss</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>
