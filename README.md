@@ -18,11 +18,10 @@ CMDb synergizes with the OMDb API to enrich the database with comprehensive movi
 
 - Front-end technologies: HTML, CSS, and JavaScript.
 - Two APIs interaction: OMDb for film data and CMDb for ratings and reviews.
-- Published on: [Mid Sweden University Student Server](https://studenter.miun.se/~tova1902/interaktiva-ht23-cmdb-interaktiva23_g10)
+
 
 ## Live Website
 
 The CMDb application is live and can be accessed
-
 
 [Cinesterna](https://studenter.miun.se/~tova1902/interaktiva-ht23-cmdb-interaktiva23_g10%20/)
